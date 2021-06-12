@@ -1,0 +1,203 @@
+/*------variables------*/
+font-size= 100%
+blue = #bfc8d7
+pink = #e2d2d2
+yellow = #e3e2b4
+green = #a2b59f
+red = #E74C3C
+radius = .25rem
+hd_h = 60px
+max_w = 1200px
+@import '_inc/_hf.styl'
+/*------public------*/
+h1,h2,h3,h4,h5
+    margin 0 auto
+a
+    text-decoration none
+ul
+    padding 0
+    margin 0
+    list-style: none
+hr
+    width 90%
+    max-width: $max_w
+    margin 1rem auto
+    border none
+    border-bottom 1px solid yellow
+img
+    display block
+    width 100%
+    height auto
+input,textarea,select,.mx-input
+    display inline-block
+    vertical-align middle
+    font-size 1rem
+    border 1px solid green
+    outline none
+    border-radius radius
+    padding: .5rem 1rem
+    box-sizing: border-box
+html,body
+    width 100%
+    height auto
+    min-height 100%
+    margin 0
+    padding 0
+    color #333
+    font-size font-size
+    font-family Avenir, Helvetica, Arial, sans-serif
+    text-align center
+section
+    width 100%
+    min-height 100%
+.flex
+    display flex
+    for col_num in (1..11)
+        .col_{col_num}
+            flex col_num
+.btn
+    display inline-block
+    text-align center
+    color #fff
+    background-color green
+    padding .5rem 1rem
+    border-radius: radius
+    border 1px solid green
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3)
+    &:hover,&.on
+        background-color #fff
+        color green
+#app
+    margin-top 60px
+/*------Home------*/
+#todo_from
+    padding 2rem 0 3rem 0
+#search_bar
+    display block
+    width 100%
+    max-width 600px
+    margin 0 auto
+    span
+        vertical-align middle
+    #search_input
+        width 80%
+        text-align left
+        input
+            width 90%
+#search_input
+    display inline-block
+    width auto
+    font-size 0
+    border 1px solid green
+    border-radius radius
+    padding: .5rem 1rem
+    box-sizing: border-box
+    img
+        display inline-block
+        vertical-align middle
+        max-width: 20px
+        margin-right .5rem
+    input
+        border none
+        border-radius 0
+        padding: 0
+#todo_add
+    display inline-block
+    max-width 90%
+    text-align left
+    margin 2rem auto
+    border 1px solid green
+    border-radius: radius
+    padding 2rem
+    box-sizing: border-box
+    background-color green
+    h3
+        text-align left
+        color #fff
+        margin-top 0
+        margin-bottom 1.5rem
+    label
+        display inline-block
+        margin-bottom 1rem
+        margin-right 1rem
+    a
+        display inline-block
+        vertical-align middle
+        max-width: 30px
+        margin-left 2rem
+    .btn
+        color green
+        background-color #fff
+        &:hover
+            opacity 0.7
+    span
+        background-color initial
+        color #fff
+#todo_list_demo
+    display block
+    width 100%
+    border-top 1px solid #fff
+    padding-top: 1rem
+    text-align center
+#todo_list_area
+    justify-content center
+    .col
+        min-width: 50%
+        h2
+            display inline-block
+            color #fff
+            background-color pink
+            border-radius: radius
+            padding 1rem 2rem
+            box-sizing: border-box
+        &:nth-of-type(2)
+            h2
+                background-color blue
+.todo_area
+    img
+        max-width: 60px
+        margin 2rem auto
+.todo_list
+    display inline-block
+    max-width: 90%
+    margin 1rem auto
+    text-align left
+    li
+        position relative
+        border-radius radius
+        color #666
+        background-color pink
+        padding 1rem 2rem 1rem 1rem
+        font-size 0
+        &:nth-of-type(even)
+            background-color #fff
+            color: green
+        input
+            position absolute
+            top 50%
+            left 0
+            transform: translate(10%,-50%)
+            margin 0 0 0 1rem
+            font-size 1rem
+        .del
+            position absolute
+            top 50%
+            right 0
+            transform: translate(-50%,-50%)
+            max-width: 20px
+        span
+            display inline-block
+            vertical-align top
+            margin-left 2rem
+            font-size 1rem
+        &.done
+            span
+                color #999
+                text-decoration: line-through
+    &.off
+        li
+            background-color blue
+            &:nth-of-type(even)
+                background-color #fff
+                color: green
+@import 'mobile.styl'

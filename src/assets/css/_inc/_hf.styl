@@ -1,0 +1,55 @@
+header
+    position fixed
+    top 0
+    left 0
+    z-index 1000
+    width 100%
+    height hd_h
+    text-align right
+    background-color #fff
+    border-bottom 1px solid green
+    &:before
+        display inline-block
+        vertical-align middle
+        content ''
+        height 100%
+        width 0
+#logo
+    position absolute
+    top 50%
+    left 0
+    transform translate(0%,-50%)
+    font-size 2rem
+    font-weight bolder
+    color #fff
+    background-color green
+    padding .5rem 1rem
+#menu_flag
+    display none
+    + label
+        display none
+#menu_list
+    display inline-block
+    text-align center
+    margin-right 1rem
+    a
+        display inline-block
+        height 100%
+        color inherit
+        line-height 3
+        border-right 1px solid green
+        padding: 0 1rem
+        box-sizing: border-box
+        &:last-child
+            margin-right 0
+            border-right none
+        &:hover
+            color #fff
+            background-color green
+            border-right 1px solid #fff
+footer
+    width 100%
+    text-align center
+    color: #fff
+    background-color green
+    padding: 1rem 0

@@ -1,19 +1,18 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
-</template>
-
-<style lang="stylus">
+<template lang="pug">
 #app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
-</style>
+  Header
+  router-view
+  Footer(copyright='2021 ToDo List by Annalia Hsiao')
+</template>
+<script>
+// @ is an alias to /src
+import Header from '@/components/header.vue'
+import Footer from '@/components/footer.vue'
+
+export default {
+  components: {
+    Header,
+    Footer
+  }
+}
+</script>
